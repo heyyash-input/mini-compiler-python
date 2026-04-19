@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Compiler</title>
+</head>
+<body>
+
+    <h2>Mini Compiler UI</h2>
+
+    <form method="POST">
+        <input type="text" name="expression" placeholder="Enter expression" required>
+        <button type="submit">Compile</button>
+    </form>
+
+    {% if tokens %}
+        <h3>Tokens:</h3>
+        <p>{{ tokens }}</p>
+    {% endif %}
+
+    {% if result %}
+        <h3>Three Address Code:</h3>
+        <ul>
+            {% for line in result %}
+                <li>{{ line }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+</body>
+</html>
