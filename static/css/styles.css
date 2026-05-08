@@ -1,0 +1,33 @@
+body {
+  background: #f5f7fb;
+  color: #222;
+}
+
+.card {
+  border: 0;
+}
+
+.token-list .badge {
+  font-size: .9rem;
+  padding: .45rem .6rem;
+}
+
+.tac-list {
+  background: #0f1724;
+  color: #e6eef8;
+  padding: 1rem;
+  border-radius: .375rem;
+}
+
+.tac-list code {
+  color: #e6eef8;
+  background: transparent;
+}
+
+footer {
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (max-width: 767px) {
+  .form-control-lg { font-size: 1rem; }
+}

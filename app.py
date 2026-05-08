@@ -70,13 +70,15 @@ def generate_TAC(tokens):
 def index():
     result = []
     tokens = []
+    token_count = 0
 
     if request.method == 'POST':
         expr = request.form['expression']
         tokens = tokenize(expr)
         result = generate_TAC(tokens)
+        token_count = len(tokens)
 
-    return render_template('index.html', tokens=tokens, result=result)
+    return render_template('index.html', tokens=tokens, result=result, token_count=token_count)
 
 if __name__ == '__main__':
     app.run(debug=True)
